@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- (a) Interface: ITEM | QUANTITY | TOTAL, then GRAND TOTAL, DISCOUNT, NET PAY, CALCULATE -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:stretchColumns="1,2">
+
+        <!-- Header row -->
+        <TableRow android:layout_marginBottom="8dp">
+            <TextView
+                android:padding="8dp"
+                android:text="ITEM"
+                android:textStyle="bold" />
+            <TextView
+                android:padding="8dp"
+                android:text="QUANTITY"
+                android:textStyle="bold" />
+            <TextView
+                android:padding="8dp"
+                android:text="TOTAL"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- BREAD -->
+        <TableRow android:layout_marginBottom="8dp">
+            <TextView
+                android:padding="8dp"
+                android:text="BREAD" />
+            <EditText
+                android:id="@+id/etBreadQty"
+                android:hint="0-4"
+                android:inputType="number" />
+            <EditText
+                android:id="@+id/etBreadTotal"
+                android:enabled="false"
+                android:inputType="none"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <!-- MILK -->
+        <TableRow android:layout_marginBottom="8dp">
+            <TextView
+                android:padding="8dp"
+                android:text="MILK" />
+            <EditText
+                android:id="@+id/etMilkQty"
+                android:hint="0-4"
+                android:inputType="number" />
+            <EditText
+                android:id="@+id/etMilkTotal"
+                android:enabled="false"
+                android:inputType="none"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <!-- SUGAR -->
+        <TableRow android:layout_marginBottom="16dp">
+            <TextView
+                android:padding="8dp"
+                android:text="SUGAR" />
+            <EditText
+                android:id="@+id/etSugarQty"
+                android:hint="0-4"
+                android:inputType="number" />
+            <EditText
+                android:id="@+id/etSugarTotal"
+                android:enabled="false"
+                android:inputType="none"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <!-- GRAND TOTAL -->
+        <TableRow android:layout_marginBottom="8dp">
+            <TextView
+                android:padding="8dp"
+                android:text="GRAND TOTAL"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/etGrandTotal"
+                android:layout_span="2"
+                android:enabled="false"
+                android:inputType="none"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <!-- DISCOUNT -->
+        <TableRow android:layout_marginBottom="8dp">
+            <TextView
+                android:padding="8dp"
+                android:text="DISCOUNT"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/etDiscount"
+                android:layout_span="2"
+                android:enabled="false"
+                android:inputType="none"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <!-- NET PAY -->
+        <TableRow android:layout_marginBottom="16dp">
+            <TextView
+                android:padding="8dp"
+                android:text="NET PAY"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/etNetPay"
+                android:layout_span="2"
+                android:enabled="false"
+                android:inputType="none"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <!-- CALCULATE -->
+        <TableRow>
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_span="3"
+                android:text="CALCULATE" />
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>
